@@ -1,0 +1,36 @@
+Why distributed systems?
+for scalable capacity
+• Aggregate resources of many computers
+– CPU: MapReduce, Dryad, Hadoop
+– Disk: NFS, the Google file system, Hadoop HDFS
+– Memory: memcached
+– Bandwidth: Akamai CDN
+• What scales are we talking about?
+– Typical datacenters have 100-200K machines!
+– Each service runs on more like 20K machines, though
+
+
+Why distributed systems?
+for modular functionality
+• Your application is split into many simpler parts, which 
+may already exist or are easier to implement
+– Authentication service
+– Indexing service
+– Locking service
+• This is called the service-oriented architecture (SOA) 
+and much of the Web is built this way
+– E.g.: one request on Amazon’s website touches tens of 
+services, each with thousands of machines (e.g., pricing 
+service, product rating service, inventory service, shopping 
+cart service, user preferences service, etc…)
+
+
+Challenges
+• Achieving location transparency, scalability, availability, 
+and modularity in distributed systems is really hard!
+• System design challenges
+– What is the right interface or abstraction?
+• Achieving scalability is challenging
+– How to partition functions for scalability?
+• Consistency challenges
+– How do machines coordinate to achieve the task?
